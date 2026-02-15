@@ -1,5 +1,5 @@
 def add_student():
-    f=open ("C:/Users/malli/OneDrive/Desktop/student management system/student management.txt","a")
+    f=open ("student management.txt","a")
     sid = input("Enter Student ID: ")
     name = input("Enter Student Name: ")
     marks = input("Enter Marks: ")
@@ -10,7 +10,7 @@ def add_student():
 
 def view_student():
     try:
-        f = open("C:/Users/malli/OneDrive/Desktop/student management system/student management.txt", "r")
+        f = open("student management.txt", "r")
     
         print("\nID\tName\tMarks")
         print("-----------------------")
@@ -37,7 +37,7 @@ def search_student():
     sid=input("enter student  ID to search")
     found=False
     try:
-        f=open("C:/Users/malli/OneDrive/Desktop/student management system/student management.txt","r")
+        f=open("student management.txt","r")
         for line in f:
             data=line.strip().split(",")
             if data[0]==sid:
@@ -58,11 +58,11 @@ def update_student():
     updated=False
     students=[]
     try:
-        f=open("C:/Users/malli/OneDrive/Desktop/student management system/student management.txt","r")
+        f=open("student management.txt","r")
         students=f.readlines()
         f.close()
 
-        f=open("C:/Users/malli/OneDrive/Desktop/student management system/student management.txt","w")
+        f=open("student management.txt","w")
         for line in students:
             data=line.strip().split(",")
             if data[0]==sid:
@@ -89,11 +89,11 @@ def delete_student():
     students=[]
 
     try:
-        f=open("C:/Users/malli/OneDrive/Desktop/student management system/student management.txt","r")
+        f=open("student management.txt","r")
         students=f.readlines()
         f.close()
 
-        f=open("C:/Users/malli/OneDrive/Desktop/student management system/student management.txt","w")
+        f=open("student management.txt","w")
         for line in students:
             data=line.strip().split(",")
             if data[0]==sid:
